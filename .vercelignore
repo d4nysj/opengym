@@ -1,0 +1,20 @@
+# Solo api/[...all].js y api/cron/*.js deben desplegarse como funciones.
+# El resto de api/ (server.js, coach/, test/, Dockerfile) es la vía Docker
+# autoalojada original: Vercel los detectaría igualmente como funciones
+# sueltas si no se excluyen aquí (y el plan Hobby limita a 12 funciones).
+api/server.js
+api/Dockerfile
+api/coach
+api/test
+
+# Empaquetado nativo (Android/iOS), sin uso en el despliegue web
+frontend/android
+frontend/ios
+frontend/capacitor.config.json
+
+# Documentación / metadatos del proyecto original, no hace falta en el deploy
+ai-enablement
+openGym_AI_Strategy.pdf
+web
+docker-compose.yml
+website
