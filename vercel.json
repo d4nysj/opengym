@@ -1,0 +1,9 @@
+{
+  "installCommand": "cd frontend && npm install && cd ../api && npm install",
+  "buildCommand": "cd frontend && npm run build",
+  "outputDirectory": "frontend/dist",
+  "functions": {
+    "api/[...all].js": { "runtime": "nodejs22.x" },
+    "api/cron/*.js": { "runtime": "nodejs22.x" }
+  }
+}

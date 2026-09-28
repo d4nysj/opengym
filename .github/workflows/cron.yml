@@ -1,0 +1,20 @@
+name: openGym cron (rest timers + daily reminder)
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch: {}
+
+jobs:
+  ping:
+    if: ${{ vars.OPENGYM_URL != '' || secrets.OPENGYM_URL != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Rest timers
+        run: |
+          curl -fsS -X POST "${{ vars.OPENGYM_URL || secrets.OPENGYM_URL }}/api/cron/rest-timers" \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}"
+      - name: Daily reminder
+        run: |
+          curl -fsS -X POST "${{ vars.OPENGYM_URL || secrets.OPENGYM_URL }}/api/cron/daily-reminder" \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}"
