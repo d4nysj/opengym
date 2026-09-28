@@ -3,7 +3,7 @@
   "buildCommand": "cd frontend && npm run build",
   "outputDirectory": "frontend/dist",
   "functions": {
-    "api/[...all].js": { "runtime": "nodejs22.x" },
-    "api/cron/*.js": { "runtime": "nodejs22.x" }
+    "api/[...all].js": { "maxDuration": 15 },
+    "api/cron/*.js": { "maxDuration": 30 }
   }
 }
