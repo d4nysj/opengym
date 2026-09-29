@@ -6,6 +6,10 @@
     "api/[...all].js": { "maxDuration": 15 },
     "api/cron/*.js": { "maxDuration": 30 }
   },
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/[...all]" },
+    { "source": "/((?!api/|assets/|manifest\\.json|sw\\.js|icon-).*)", "destination": "/index.html" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
