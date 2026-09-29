@@ -219,7 +219,7 @@ export default {
   'Pick a name, then confirm with your device.': 'Elige un nombre y confirma con tu dispositivo.',
   'Your name': 'Tu nombre',
   'Create passkey': 'Crear passkey',
-  'Your workouts. Your weights. Your profile.': 'Tus entrenamientos. Tus pesos. Tu perfil.',
+  'You talk more than you lift.': 'Hablas más de lo que levantas.',
   'Sign in with passkey': 'Iniciar sesión con passkey',
   'Create new profile': 'Crear perfil nuevo',
   "This browser doesn't support passkeys — you can still use openGym locally on this device.": 'Este navegador no admite passkeys — aun así puedes usar openGym localmente en este dispositivo.',
