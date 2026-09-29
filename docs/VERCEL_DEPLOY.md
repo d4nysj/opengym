@@ -60,8 +60,20 @@ En `github.com/d4nysj/opengym` → Settings → Secrets and variables → Action
 El workflow `.github/workflows/cron.yml` ya está en el repo y se activa solo
 en cuanto existan esos dos secrets (corre cada 5 minutos).
 
-## 4. Primer usuario admin
+## 4. Primer usuario admin, luego cerrar el registro (invite-only)
 
-1. Entra a la web y crea tu perfil (paskey) normalmente.
-2. En Supabase → Table Editor → `users`, copia tu `id`.
-3. Pon ese `id` en la variable de entorno `ADMIN_UIDS` de Vercel y redeploy.
+Hay un huevo-o-gallina: `INVITE_ONLY` bloquea el registro sin código, pero
+hasta que existe un admin no hay quien genere códigos. Orden correcto:
+
+1. Despliega con `INVITE_ONLY` sin poner (o en `0`) y entra a la web para
+   crear tu perfil (passkey) normalmente — este primer registro queda
+   abierto a cualquiera que conozca la URL, así que hazlo cuanto antes tras
+   el primer deploy.
+2. En Supabase → Table Editor → `users`, copia tu `id`, o ponlo directo en
+   la variable de entorno `ADMIN_UIDS` de Vercel (alternativa: marcar
+   `admin = true` en esa fila desde el SQL editor de Supabase).
+3. Añade `INVITE_ONLY=1` en las variables de entorno de Vercel y redeploy:
+   a partir de aquí nadie más puede crear una cuenta sin un código.
+4. Desde el panel de admin de la web (`/admin` → Invites), genera un código
+   de invitación de un solo uso por cada persona a la que quieras dar
+   acceso. Los códigos se pueden revocar mientras no se hayan usado.
