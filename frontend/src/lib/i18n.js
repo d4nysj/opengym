@@ -5,7 +5,7 @@
 // language, from the upstream dataset) — also lazy-loaded on language switch.
 import { useSyncExternalStore } from 'react'
 
-// UI languages. Trimmed to what D4NyosGYM's people actually speak.
+// UI languages. Trimmed to what D4Nyos GYM's people actually speak.
 export const LANGS = { en: 'English', es: 'Español' }
 export const INSTR_LANGS = ['en', 'es']
 const DATE_LOCALES = { en: 'en-GB', es: 'es-ES' }

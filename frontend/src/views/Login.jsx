@@ -49,7 +49,7 @@ export default function Login() {
   }
   const head = <>
     <div style={{ display: 'flex', justifyContent: 'center' }}><img src="/icon-512.png" alt="" width={72} height={72} style={{ borderRadius: 16 }} /></div>
-    <h1 style={{ fontSize: 34, fontWeight: 700, letterSpacing: '-.028em', margin: '10px 0 4px' }}>D4NyosGYM</h1>
+    <h1 style={{ fontSize: 34, fontWeight: 700, letterSpacing: '-.028em', margin: '10px 0 4px' }}>D4Nyos GYM</h1>
   </>
   const wrap = { display: 'flex', flexDirection: 'column', justifyContent: 'center', minHeight: '78vh', textAlign: 'center' }
 

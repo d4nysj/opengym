@@ -210,7 +210,7 @@ export default function Settings() {
     </Section>}
 
     <div className="dim small" style={{ textAlign: 'center', marginTop: 4, lineHeight: 1.6 }}>
-      D4NyosGYM · <a href="https://github.com/d4nysj/opengym" target="_blank" rel="noopener">source</a><br />
+      D4Nyos GYM · <a href="https://github.com/d4nysj/opengym" target="_blank" rel="noopener">source</a><br />
       exercise data: hasaneyldrm/exercises-dataset (CC)
     </div>
   </div>
